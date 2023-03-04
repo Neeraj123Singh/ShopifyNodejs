@@ -9,6 +9,7 @@ lerna-debug.log*
 error.log
 combined.log
 report.pdf
+.env
 
 
 

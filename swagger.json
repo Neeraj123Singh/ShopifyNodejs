@@ -1,0 +1,213 @@
+{
+    "swagger":"2.0",
+    "info":{
+      "description":"This is collection of all CRM Api's ",
+      "version":"1.0.0",
+      "title":"CRM Api's",
+      "contact":{
+        "email":"neeraj.singh@novostack.com"
+      },
+      "license":{
+        "name":"Apache 2.0",
+        "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+      }
+    },
+    "schemes":[
+    "http"
+    ],
+    "host":"localhost:3001",  
+    "basePath":"/v1/",
+    "paths":{
+      "/product/createProduct":{
+        "post":{
+          "summary":"",
+          "description":"Create Product",
+          "produces":[
+            "application/json"
+          ],
+          "parameters":[
+            {
+              "in":"body",
+              "name":"body",
+              "type":"string",
+              "description":"Give below specified parameters",
+              "required":true,
+              "schema":{
+                "$ref":"#/definitions/createProductRequest"
+              }
+            }
+          ],
+          "responses":{
+            "200":{
+              "description":"create Product",
+              "examples":{
+                "application/json":{ }
+              }
+            }
+          }
+        }
+      },
+      "/product/getAllProduct":{
+        "post":{
+          "summary":"",
+          "description":"Get all Products",
+          "produces":[
+            "application/json"
+          ],
+          "parameters":[
+            {
+              "in":"body",
+              "name":"body",
+              "type":"string",
+              "description":"Give below specified parameters",
+              "required":true,
+              "schema":{
+                "$ref":"#/definitions/getAllProductRequest"
+              }
+            }
+          ],
+          "responses":{
+            "200":{
+              "description":"Get all Products",
+              "examples":{
+                "application/json":{ }
+              }
+            }
+          }
+        }
+      },
+      "/product/deleteProduct":{
+        "post":{
+          "summary":"",
+          "description":"Delete A Product",
+          "produces":[
+            "application/json"
+          ],
+          "parameters":[
+            {
+              "in":"body",
+              "name":"body",
+              "type":"string",
+              "description":"Give below specified parameters",
+              "required":true,
+              "schema":{
+                "$ref":"#/definitions/deleteProductRequest"
+              }
+            }
+          ],
+          "responses":{
+            "200":{
+              "description":"Get all Products",
+              "examples":{
+                "application/json":{ }
+              }
+            }
+          }
+        }
+      },
+      "/product/updateProduct":{
+        "post":{
+          "summary":"",
+          "description":"Update A Product",
+          "produces":[
+            "application/json"
+          ],
+          "parameters":[
+            {
+              "in":"body",
+              "name":"body",
+              "type":"string",
+              "description":"Give below specified parameters",
+              "required":true,
+              "schema":{
+                "$ref":"#/definitions/UpdateProductRequest"
+              }
+            }
+          ],
+          "responses":{
+            "200":{
+              "description":"Update Product",
+              "examples":{
+                "application/json":{ }
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions":{
+      "getAllProductRequest":{
+        "type":"object",
+        "properties":{
+        }
+      },
+      "deleteProductRequest":{
+        "type":"object",
+        "properties":{
+          "id":{
+            "type":"integer",
+            "default":19200
+          }
+        }
+      },
+      "createProductRequest":{
+        "type":"object",
+        "properties":{
+          "product":{
+            "type":"object",
+            "properties":{
+            "title":{
+                "type":"string",
+                "default":""
+              },
+              "body_html":{
+                "type":"string",
+                "default":""
+              },
+              "vendor":{
+                "type":"string",
+                "default":""
+              },
+              "product_type":{
+                "type":"string",
+                "default":""
+              },
+              "status": {
+                "type":"string",
+                "default":""
+              }
+            }
+          }
+        }
+      },
+      "UpdateProductRequest":{
+        "type":"object",
+        "properties":{
+          "id":{
+            "type":"integer",
+            "default":34
+          },
+          "title":{
+            "type":"string",
+            "default":"Product 1"
+          },
+          "body_html":{
+            "type":"string",
+            "default":"Product 1"
+          },
+          "vendor":{
+            "type":"string",
+            "default":"Product 1"
+          },
+          "product_type":{
+            "type":"string",
+            "default":"Product 1"
+          },
+          "status": {
+            "type":"string",
+            "default":"Product 1"
+          }
+        }
+      }
+  }
+}
